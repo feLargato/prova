@@ -1,0 +1,14 @@
+###
+POST https://localhost:5001/api/filme/add
+Content-Type: application/json
+
+{
+    "nome": "filme",
+    "ano": 2001,
+    "genero": "ação",
+    "diretor": "diretor"
+}
+
+###
+GET https://localhost:5001/api/filme/list
+

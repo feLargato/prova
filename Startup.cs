@@ -1,3 +1,4 @@
+using System.Net.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using prova.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace prova
 {
@@ -27,6 +30,9 @@ namespace prova
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddDbContext<Context> (
+                options => options.UseInMemoryDatabase("database")
+            );
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
