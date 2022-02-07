@@ -1,2 +1,2 @@
-# prova
-avaliação bimestral quarta a noite
+# Test
+Backend for the Object Oriented Programming test
